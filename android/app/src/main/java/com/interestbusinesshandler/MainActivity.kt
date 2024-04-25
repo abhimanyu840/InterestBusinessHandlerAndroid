@@ -4,6 +4,7 @@ import android.os.Bundle;
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint.fabricEnabled
+import org.devio.rn.splashscreen.SplashScreen;
 import com.facebook.react.defaults.DefaultReactActivityDelegate
 
 class MainActivity : ReactActivity() {
@@ -15,6 +16,7 @@ class MainActivity : ReactActivity() {
   override fun getMainComponentName(): String = "InterestBusinessHandler"
 
   override fun onCreate(savedInstanceState: Bundle?) {
+    SplashScreen.show(this);
     super.onCreate(null)
   }
 

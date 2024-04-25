@@ -14,6 +14,7 @@ import ReduceMoney from './screens/modals/ReduceMoney';
 import ShowHistory from './screens/modals/ShowHistory';
 import { getLoginData } from './login/getLoginData';
 import { logout } from './login/logout';
+import SplashScreen from 'react-native-splash-screen'
 
 const theme = createTheme({
   lightColors: {
@@ -46,6 +47,14 @@ const Stack = createNativeStackNavigator<ScreenType>();
 
 
 const App = () => {
+
+  useEffect(() => {
+    setTimeout(() => {
+      SplashScreen.hide();
+    }, 500);
+  }, [])
+
+
   const [login, setLogin] = useState<boolean>(false)
   const [token, setToken] = useState<string>('')
   const [uid, setUid] = useState<string>('')
